@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.userstable.TableViewController">
+    <TableView fx:id="userTable">
+        <columns>
+            <TableColumn fx:id="userIdColumn" text="ID" prefWidth="50">
+                <cellValueFactory><PropertyValueFactory property="userId"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="userNameColumn" text="Name" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="userName"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="birthdateColumn" text="Birthdate" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="birthdate"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="salaryColumn" text="Salary" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="salary"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="editColumn" text="Edit" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="editButton"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="deleteColumn" text="Delete" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="deleteButton"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <Button text="Add User" onAction="#handleAddUser"/>
+</VBox>
